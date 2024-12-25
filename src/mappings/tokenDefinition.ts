@@ -17,9 +17,9 @@ export class TokenDefinition {
         decimals: BigInt.fromI32(18),
       },
       {
-        address: Address.fromString('0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9'),
-        symbol: 'AAVE',
-        name: 'Aave Token',
+        address: Address.fromString('0xa69e8c5afc0a4633d3d84d6c360998354c4c692c'),
+        symbol: 'USDC',
+        name: 'USDC Token',
         decimals: BigInt.fromI32(18),
       },
       {

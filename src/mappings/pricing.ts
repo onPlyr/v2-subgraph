@@ -5,7 +5,7 @@ import { Bundle, Pair, Token } from '../types/schema'
 import { ADDRESS_ZERO, factoryContract, ONE_BD, UNTRACKED_PAIRS, ZERO_BD } from './helpers'
 
 const WETH_ADDRESS = '0xaaaabe49a72ecf0804292ce8e889016d9d05767c'
-const USDC_WETH_PAIR = '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc' // created 10008355
+const USDC_WETH_PAIR = '0xd3b8765c4b12d7740d935f9bbc564acd2ad6d030' // created 10008355
 const DAI_WETH_PAIR = '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11' // created block 10042267
 const USDT_WETH_PAIR = '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852' // created block 10093341
 
@@ -44,7 +44,7 @@ let WHITELIST: string[] = [
   '0xaaaabe49a72ecf0804292ce8e889016d9d05767c', // WPLYR
   '0x9b7ecabe00d41ef37434975db8fb7323dd596f1c', // COQ
   '0x008058f98b3351c72ea0c5f471e1bae268f31c41', // WAVAX
-  '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
+  '0xa69e8c5afc0a4633d3d84d6c360998354c4c692c', // USDC
   '0x0000000000085d4780b73119b644ae5ecd22b376', // TUSD
   '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643', // cDAI
   '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
