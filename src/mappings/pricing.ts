@@ -5,7 +5,7 @@ import { Bundle, Pair, Token } from '../types/schema'
 import { ADDRESS_ZERO, factoryContract, ONE_BD, UNTRACKED_PAIRS, ZERO_BD } from './helpers'
 
 const WETH_ADDRESS = '0xaaaabe49a72ecf0804292ce8e889016d9d05767c'
-const USDC_WETH_PAIR = '0xd3b8765c4b12d7740d935f9bbc564acd2ad6d030' // created 10008355
+const USDC_WETH_PAIR = '0x37dc84c655d76a485c24f27cf4049b7a6cf39ba1' // created 10008355
 const DAI_WETH_PAIR = '0xa478c2975ab1ea89e8196811f51a7b7ade33eb11' // created block 10042267
 const USDT_WETH_PAIR = '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852' // created block 10093341
 
@@ -42,33 +42,48 @@ export function getEthPriceInUSD(): BigDecimal {
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   '0xaaaabe49a72ecf0804292ce8e889016d9d05767c', // WPLYR
-  '0x9b7ecabe00d41ef37434975db8fb7323dd596f1c', // COQ
-  '0x008058f98b3351c72ea0c5f471e1bae268f31c41', // WAVAX
-  '0xa69e8c5afc0a4633d3d84d6c360998354c4c692c', // USDC
-  '0xa875625fe8a955406523e52e485f351b92908ce1', // GAMR
-  '0xa79f25cbfe32f5f29f4ca96aae67acd49d65655f', // SUPER
-  '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
-  '0x86fadb80d8d2cff3c3680819e4da99c10232ba0f', // EBASE
-  '0x57ab1ec28d129707052df4df418d58a2d46d5f51', // sUSD
-  '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2', // MKR
-  '0xc00e94cb662c3520282e6f5717214004a7f26888', // COMP
-  '0x514910771af9ca656af840dff83e8264ecf986ca', //LINK
-  '0x960b236a07cf122663c4303350609a66a7b288c0', //ANT
-  '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f', //SNX
-  '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', //YFI
-  '0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8', // yCurv
-  '0x853d955acef822db058eb8505911ed77f175b99e', // FRAX
-  '0xa47c8bf37f92abed4a126bda807a7b7498661acd', // WUST
-  '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984', // UNI
-  '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599', // WBTC
-  '0x956f47f50a910163d8bf957cf5846d573e7f87ca', // FEI
+  '0x17563c474a5c3ffd51808fdcdde3457b6dc38932', // COQ
+  '0x1d1c9bc4eb65ff52402275a6e64a2773ebf3ed04', // WAVAX
+  '0x63f551298862f306b689724519d95eda3dcde5b8', // USDC
+  '0x413f1a8f0a2bd9b6d31b2ca91c4aa7bc08266731', // GAMR
+  '0x612a487212710fcdc022935ae5757facabd2881a',
+  '0x3d1307f5c85d06b1c31253a12a87c1a83391d137',
+  '0x3433dc3a55d9c77315cd939ad775000d31f426d5',
+  '0xc9700ba01e13ed71e3909a72fe1c0c00b7918ad5',
+  '0x9facd5921a80421a9f184d085bfce0041592b792',
+  '0xc5e6cf3fe058e502aef70364be54bf98d7c40b21',
+  '0xef40c286c6d7c90c19ffceb54d8c225daa554c3f',
+  '0xcef949aaf9a0d91892eb452fb03914f40eac16dd',
+  '0x3427379648109d20c27a9d22b9236f29325ccfbb',
+  '0x528b5c9f4a401b230f6e15014522e1b60a15f342',
+  '0xff114749aefc5e4fdb865669eb159660c988d06b',
+  '0x78de1332ef4775811fff5000d5a9ebf70a665b5b',
+  '0x9f0c919fd20c8ee053f4277b1a253bc46cdaa8fc',
+  '0x5e6e93c97028684ff5f630dd476f5cd6b817ca2e',
+  '0x71341294b022c935aca0757f6f59547d9fb65e5e',
+  '0x93ff41d044c9eca47734a1fed6cd86e930351020',
+  '0x7524a1cd5742d654d73e87854b376c2aa1554509',
+  '0x0ef4cf2298ba3dd3840b96561749826b05d386aa',
+  '0x4c72ada1b94de1731d060805b4d47ee908a43953',
+  '0x20cddb160a06de6f9b45462debbe8b7a2b5eb4e0',
+  '0xf81998b41c74e06bc97444190371e764d15473de',
+  '0x8d5deadeec6b9118313ffee8fe3dff788a40e4ea',
+  '0xa28028081804b05fe8e7b3b78dd5daf2a0488db4',
+  '0xf7df8ea81caee397b15c84763f23343977652a11',
+  '0xa79f25cbfe32f5f29f4ca96aae67acd49d65655f',
+  '0xc12a69280f473070b01c16b7c4e9fdcfba4990cb',
+  '0xabb084bac6e284af918682055c79929aa94c3c5c',
+  '0x2077d0d723f007605fe818aa809e053de4f547bb',
+  '0x40774a8003f8a3b3104cb6a25d3ae66d379651b2',
+  '0x5617309bd091fecb212db77c796938fa31c5a12d',
+  '0x1c59c4087f12d61c152644d90a4b2f3e5f9e7166',
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('400000')
+let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('100')
 
 // minimum liquidity for price to get tracked
-let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('2')
+let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('1')
 
 /**
  * Search through graph to find derived Eth per token.
