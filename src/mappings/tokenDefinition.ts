@@ -20,7 +20,7 @@ export class TokenDefinition {
         address: Address.fromString('0x63F551298862f306B689724519D95eDA3dCDE5b8'),
         symbol: 'USDC',
         name: 'USDC',
-        decimals: BigInt.fromI32(18),
+        decimals: BigInt.fromI32(6),
       },
       {
         address: Address.fromString('0xc9700BA01E13eD71E3909a72fe1C0C00B7918ad5'),
@@ -38,7 +38,7 @@ export class TokenDefinition {
         address: Address.fromString('0xAAAaBe49A72EcF0804292CE8e889016d9D05767c'),
         symbol: 'WPLYR',
         name: 'WPLYR',
-        decimals: BigInt.fromI32(16),
+        decimals: BigInt.fromI32(18),
       },
       {
         address: Address.fromString('0x1D1c9Bc4EB65fF52402275a6e64A2773eBF3ed04'),
